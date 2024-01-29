@@ -21,11 +21,12 @@
 </head>
 
 <body>
-
-    <video src="./Videos/" autoplay muted></video>
+    <div class="banner-video">
+        <video src="./Videos/banner.mp4" loop autoplay muted></video>
+    </div>
     <header>
         <div class="navigation">
-            <div class="d-flex justify-content-between">
+            <div class="flex-box d-flex justify-content-between">
                 <div class="logo-area">
                     <a href=""><img src="./Image/" alt="logo">hello world</a>
                 </div>
@@ -33,8 +34,8 @@
                     <nav>
                         <ul class="nav justify-content-between">
                             <li><a href="#About">About</a></li>
-                            <li><a href="#work">Work</a></li>
                             <li><a href="#thinking">Our Thinking</a></li>
+                            <li><a href="#work">Work</a></li>
                             <li><a href=".">Portfolio</a></li>
                         </ul>
                     </nav>
@@ -48,28 +49,28 @@
             </div>
         </div>
 
-        <h1>New Economy Creativity</h1>
-
+        <div class="web-heading-text">
+            <h1>New Economy Creativity</h1>
+        </div>
     </header>
 
 
 
 
-    <section class="About-section">
+    <section class="About-section" id="About">
         <div class="container-fluid">
-            <h2>1</h2>
             <div class="about-content">
+                <h2>1</h2>
                 <h3>There’s a new economy taking shape, full of customers who expect more from brands than ever before.
-                </h3>
+                </h3><br>
                 <h3>We help ambitious brands <span>become positive forces</span> in this new world.</h3>
             </div>
         </div>
     </section>
 
 
-    <section class="thining-section">
+    <section class="thining-section " id="thinking">
         <div class="container-fluid">
-            <h2>2</h2>
             <div class="row thinking-conent">
                 <div class="col-md-6 col-sm-12">
                     <div class="thinking-image">
@@ -78,10 +79,13 @@
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="thinking-text">
-                        <h3>Meet the
-                            new economy customer</h3>
-                        <p>
-                            It all starts with a deeper understanding of what people really value.</p>
+                        <span>
+                            <h2>2</h2>
+                            <h3>Meet the
+                                new economy customer</h3>
+                            <p>
+                                It all starts with a deeper understanding of what people really value.</p>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -91,13 +95,15 @@
 
 
 
-    <section class="our-work-section">
-        <div class="container-fluid">
-            <span>
-                <h2>3</h2>
-            </span>
+    <section class="our-work-section" id="work">
+        <div class="container">
             <div class="work-title d-flex">
-                <h3>Our Work</h3>
+                <div class="heading">
+                    <span>
+                        <h2>3</h2>
+                    </span>
+                    <h3>Our Work</h3>
+                </div>
                 <p>
                     We combine three powerful drivers of change:
                     creativity, media and technology.
@@ -185,6 +191,12 @@
 
 
 
+    <footer>
+
+    </footer>
+
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -202,7 +214,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-
+    <script src="./Js/Custom.js"></script>
     <script>
         $('.owl-carousel').owlCarousel({
             items: 2,
@@ -212,6 +224,15 @@
             URLhashListener: true,
             autoplayHoverPause: true,
             startPosition: 'URLHash'
+        });
+
+
+
+
+
+        // scroll behavior 
+        window.scroll({
+            behavior: "smooth",
         });
     </script>
 </body>
