@@ -10,6 +10,13 @@
 
 
 
+:root {
+
+    --primaryColor: #d4a561;
+    --black: black;
+
+}
+
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -61,19 +68,20 @@ header {
 
 header {
     width: 100%;
-    height: 80vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9999999999999;
+    height: 100%;
 }
 
-header .navigation {
+.navigation {
     width: 100%;
     height: 80px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
 }
 
-header .navigation .flex-box {
+.navigation .flex-box {
     width: 95%;
     height: 100%;
     margin: 0 auto;
@@ -83,18 +91,19 @@ header .navigation .flex-box {
 
 }
 
-header .navigation {
-    background-color: red;
+.navigation {
+    background-color: white;
     position: sticky;
     top: 0;
+    z-index: 999999999999;
 }
 
-header .nav-items nav {
+.nav-items nav {
     display: flex;
     z-index: 666666666;
 }
 
-header .nav-items nav ul {
+.nav-items nav ul {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -103,7 +112,7 @@ header .nav-items nav ul {
 
 
 .nav-items ul li a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-weight: 600;
     font-size: 18px;
@@ -116,7 +125,7 @@ header .nav-items nav ul {
 }
 
 .nav-items ul li a:hover {
-    color: orange;
+    color: var(--primaryColor);
 }
 
 .navigation .social-icons {
@@ -134,26 +143,49 @@ header .nav-items nav ul {
 
 .navigation .social-icons a {
     font-size: 30px;
-    color: white;
+    color: var(--primaryColor);
     cursor: pointer;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
 }
 
+.navigation .social-icons a:hover {
+    color: var(--black);
+}
+
+.banner-video {
+    position: relative;
+}
+
+.banner-video{
+    position: relative;
+}
+header .web-heading-text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;    
+}
 header h1 {
     width: 100%;
     height: 100%;
     padding: 0px 100px;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    font-size: 120px;
+    margin: auto auto;
+    font-size:66px;
     position: absolute;
     left: 5%;
-    top: 5%;
+    top: 0%;
     color: white;
     font-weight: 900;
     justify-content: center;
     margin: 0 auto;
-    z-index: -1;
+    z-index: ;
+
 }
 
 
@@ -168,7 +200,7 @@ section h2 {
     width: 80px;
     height: 80px;
     display: flex;
-    border: 3px solid brown;
+    border: 3px solid var(--primaryColor);
     align-items: center;
     justify-content: center;
     border-radius: 50%;
@@ -186,8 +218,7 @@ section h2 {
 
 .About-section {
     width: 100%;
-    padding-top: 100px;
-    margin-top: 50px;
+    margin: 25px 0;
 }
 
 .About-section .container-fluid {
@@ -198,7 +229,7 @@ section h2 {
     width: 80%;
     margin: 0 auto;
     padding: 50px 30px;
-    border-left: 2px solid brown;
+    border-left: 2px solid var(--primaryColor);
 }
 
 .about-content h3 {
@@ -208,7 +239,7 @@ section h2 {
 
 .about-content h3 span {
     font-size: 40px;
-    color: red;
+    color: var(--primaryColor);
     font-weight: 600;
 }
 
@@ -222,7 +253,7 @@ section h2 {
 
 /* thinking section */
 .thining-section {
-    margin: 100px 0;
+    padding: 100px 0;
 }
 
 .thinking-image {
@@ -241,7 +272,7 @@ section h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-left: 1px solid brown;
+    border-left: 1px solid var(--primaryColor);
     padding-left: 20px;
 }
 
@@ -265,12 +296,12 @@ section h2 {
 /* work slides  */
 
 .our-work-section {
-    margin: 100px 0;
+    margin-top: 100px;
 }
 
 .our-work-section .heading {
     width: 40%;
-    border-right: 1px solid brown;
+    border-right: 1px solid var(--primaryColor);
 }
 
 .work-title h3 {
@@ -322,7 +353,7 @@ section h2 {
     height: 60px;
     margin: 0px 15px;
     color: white !important;
-    background-color: green !important;
+    background-color: var(--primaryColor) !important;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -335,4 +366,90 @@ section h2 {
     align-items: center;
     justify-content: center;
     margin-top: -15px;
+}
+
+
+
+
+
+
+
+/* contact details */
+.contact-us-section{
+    margin: 40px 0;
+}
+.contact-us-section h2{
+    margin-bottom: 25px;
+}
+.contact-us-section .card {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.contact-us-section .card h3 {
+    text-align: center;
+}
+
+.contact-us-section .card span:first-child {
+    width: 85%;
+}
+
+.location {
+    display: flex;
+    margin-top: 15px;
+    text-transform: capitalize;
+}
+
+
+
+.location li {
+    width: 50px;
+    list-style: none;
+    font-size: 24px;
+}
+.contact-us-section
+.col-md-4:nth-child(1) .card li{
+    width: 80px;
+  font-size: 24px;
+}
+.contact-us-section
+.col-md-4:nth-child(2) .card .location{
+   justify-content: center;
+}
+.contact-us-section
+.col-md-4:nth-child(2) .card .location li{
+   font-size: 28px;
+}
+
+.location p {
+    font-weight: 600 !important;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.location .fa-location-dot {
+    color: brown !important;
+}
+
+
+
+
+
+
+
+footer{
+    height: 100px;
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
 }
